@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <title>Moved — Armaan’s Tech Tips</title>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
 
-    <!-- SEO: tell search engines the new canonical home -->
-    <link rel="canonical" href="https://armaans-tech-tips.github.io/" />
+    <link rel="canonical" href="https://armaans-tech-tips.github.io/">
 
-    <!-- JS redirect (preserves path + hash) -->
+    <meta http-equiv="refresh" content="0; url=https://armaans-tech-tips.github.io/">
+
     <script>
-      const NEW_BASE = "https://armaans-tech-tips.github.io";
-      const path = window.location.pathname;
-      const hash = window.location.hash;
-      window.location.replace(NEW_BASE + path + hash);
+      window.location.href = "https://armaans-tech-tips.github.io/";
     </script>
-
-    <!-- Fallback for no-JS environments -->
-    <meta http-equiv="refresh" content="0; url=https://armaans-tech-tips.github.io/" />
   </head>
-
   <body>
     <p>
-      This site has moved to
+      Redirecting to
       <a href="https://armaans-tech-tips.github.io/">
-        https://armaans-tech-tips.github.io/
+        armaans-tech-tips.github.io
       </a>
     </p>
   </body>
