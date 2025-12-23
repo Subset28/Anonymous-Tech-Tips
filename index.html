@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting…</title>
+<script>
+  // NEW SITE (destination)
+  const NEW_ORIGIN = "https://armaans-tech-tips.github.io";
 
-    <link rel="canonical" href="https://armaans-tech-tips.github.io/">
+  // Current full URL
+  const current = window.location.href;
 
-    <meta http-equiv="refresh" content="0; url=https://armaans-tech-tips.github.io/">
+  // If we're already on the destination host, do nothing (prevents loops)
+  if (window.location.origin === NEW_ORIGIN) {
+    // Optional: if you *also* need to map paths, do it here
+  } else {
+    // Preserve path + query + hash
+    const target = NEW_ORIGIN + window.location.pathname + window.location.search + window.location.hash;
 
-    <script>
-      window.location.href = "https://armaans-tech-tips.github.io/";
-    </script>
-  </head>
-  <body>
-    <p>
-      Redirecting to
-      <a href="https://armaans-tech-tips.github.io/">
-        armaans-tech-tips.github.io
-      </a>
-    </p>
-  </body>
-</html>
+    // Extra safety: only redirect if it's actually different
+    if (target !== current) {
+      window.location.replace(target);
+    }
+  }
+</script>
